@@ -1,0 +1,68 @@
+Fetching data for sabrinacarpenter
+API error: 403 Forbidden
+HTTP error encountered: Request-sent
+HTTP error encountered: Request-sent
+Traceback (most recent call last):
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 133, in <module>
+    get_all_data(args.username, args.timeframe_days)
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 92, in get_all_data
+    account_data_response = fetch_data(f"/v1/info?username_or_id_or_url={username}", headers)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 40, in fetch_data
+    raise Exception(f"Failed to fetch data after {max_retries} attempts")
+Exception: Failed to fetch data after 3 attempts
+Fetching data for sabrinacarpenter
+API error: 403 Forbidden
+HTTP error encountered: Request-sent
+HTTP error encountered: Request-sent
+Traceback (most recent call last):
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 133, in <module>
+    get_all_data(args.username, args.timeframe_days)
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 92, in get_all_data
+    account_data_response = fetch_data(f"/v1/info?username_or_id_or_url={username}", headers)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py", line 40, in fetch_data
+    raise Exception(f"Failed to fetch data after {max_retries} attempts")
+Exception: Failed to fetch data after 3 attempts
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:45: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:103: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow() - timedelta(days=timeframe_days)
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:115: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  post_timestamp = datetime.utcfromtimestamp(post.get('taken_at', 0))
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:61: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()  # Common run time for all posts
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:66: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  taken_at_datetime = datetime.utcfromtimestamp(taken_at_unix).isoformat() + 'Z' if taken_at_unix else 'N/A'
+Fetching data for sabrinacarpenter
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:45: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:103: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow() - timedelta(days=timeframe_days)
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:115: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  post_timestamp = datetime.utcfromtimestamp(post.get('taken_at', 0))
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:61: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()  # Common run time for all posts
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:66: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  taken_at_datetime = datetime.utcfromtimestamp(taken_at_unix).isoformat() + 'Z' if taken_at_unix else 'N/A'
+Fetching data for sabrinacarpenter
+Exception ignored error evaluating path:
+Traceback (most recent call last):
+  File "<frozen getpath>", line 353, in <module>
+InterruptedError: [Errno 4] Interrupted system call
+Fatal Python error: error evaluating path
+Python runtime state: core initialized
+
+Current thread 0x00000001fba54c00 (most recent call first):
+  <no Python frame>
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:45: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:103: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  end_time = datetime.utcnow() - timedelta(days=timeframe_days)
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:115: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  post_timestamp = datetime.utcfromtimestamp(post.get('taken_at', 0))
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:61: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  run_time = datetime.utcnow().isoformat()  # Common run time for all posts
+/Users/pulie/Documents/instagram-analytics/scrapper/scrapper_final.py:66: DeprecationWarning: datetime.datetime.utcfromtimestamp() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.fromtimestamp(timestamp, datetime.UTC).
+  taken_at_datetime = datetime.utcfromtimestamp(taken_at_unix).isoformat() + 'Z' if taken_at_unix else 'N/A'
+Fetching data for sabrinacarpenter
