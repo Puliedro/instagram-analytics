@@ -7,14 +7,19 @@ import time
 from http.client import HTTPException
 import argparse
 
+
+
+# Retrieve API and MongoDB connection key from environment variables
+API_KEY = os.getenv('RAPIDAPI_KEY')
+db_con = os.getenv('DB_CONNECTION')
+
+
 # Establish MongoDB connection
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient(db_con)
 db = client['instagram_analytics']
 accounts_collection = db['accounts']
 posts_collection = db['posts']
 
-# Retrieve API key from environment variables
-API_KEY = os.getenv('RAPIDAPI_KEY')
 
 # Ensure API key is present
 if not API_KEY:

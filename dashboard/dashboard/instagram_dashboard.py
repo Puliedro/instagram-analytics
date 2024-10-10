@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 from pymongo import MongoClient
-import json
+import os
 import plotly.express as px
 import plotly.graph_objects as go
 from streamlit_autorefresh import st_autorefresh
@@ -13,8 +13,11 @@ st.set_page_config(page_title="Instagram Analytics Dashboard", layout="wide")
 # Set the interval to 300000 milliseconds (5 minutes)
 st_autorefresh(interval=30000, key="datarefresher")
 
+# Get DB connection from env variable
+db_con = os.getenv('DB_CONNECTION')
+
 # Set up database connection
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient(db_con)
 db = client['instagram_analytics']
 
 @st.cache_resource(ttl=300)  
