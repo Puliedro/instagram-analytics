@@ -236,7 +236,7 @@ def display_dashboard():
 
 
 # Prediction with Prophet
-    st.markdown("<h2>Predicted Followers and Likes for the Next 30 Days</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>Predicted Followers for the Next 30 Days</h2>", unsafe_allow_html=True)
 
     try:
         # Followers Prediction
@@ -269,7 +269,7 @@ def display_dashboard():
     
 
     # Third row: Average Interactions Section
-    st.markdown("<h2>Numerical Indicators for Average Interactions</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>Posts and Average Interactions</h2>", unsafe_allow_html=True)
 
     # Create a plotly figure for the numerical indicators
     fig_indicator = go.Figure()
@@ -370,11 +370,6 @@ def display_dashboard():
     st.plotly_chart(fig_top_posts)
 
 
-
-
-    # Display clickable links with thumbnails for the top 10 posts under the chart
-    st.markdown("Top Posts")
-
     # Start a single row div for the posts (horizontal alignment)
     st.markdown("<div style='white-space: nowrap; overflow-x: auto;'>", unsafe_allow_html=True)
 
@@ -398,3 +393,7 @@ def display_dashboard():
 
     # Display the generated HTML for the thumbnails in a row
     st.markdown(thumbnails_html, unsafe_allow_html=True)
+
+    # Only run the dashboard if this script is executed directly
+if __name__ == '__main__':
+    display_dashboard()
