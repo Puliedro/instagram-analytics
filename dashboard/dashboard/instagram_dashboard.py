@@ -11,8 +11,8 @@ from prophet import Prophet
 
 # Basic configuration for the Streamlit app
 st.set_page_config(page_title="Instagram Analytics Dashboard", layout="wide")
-# Set the interval to 300000 milliseconds (5 minutes)
-st_autorefresh(interval=60000, key="datarefresher")
+# Set the interval to refresh
+st_autorefresh(interval=1800000, key="datarefresher")
 
 # Get DB connection from env variable
 db_con = os.getenv('DB_CONNECTION')
@@ -21,7 +21,7 @@ db_con = os.getenv('DB_CONNECTION')
 client = MongoClient(db_con)
 db = client['instagram_analytics']
 
-@st.cache_resource(ttl=600)  
+@st.cache_resource(ttl=1800)  
 def fetch_data():
     accounts_data = pd.DataFrame(list(db.accounts.find()))
     posts_data = pd.DataFrame(list(db.posts.find()))
